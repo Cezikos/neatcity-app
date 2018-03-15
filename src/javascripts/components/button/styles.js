@@ -4,6 +4,7 @@ import COLORS from '../../styles/colors';
 
 const baseStyles = {
   borderRadius: 50,
+  textAlign: 'center'
 };
 
 const small = {
