@@ -15,9 +15,8 @@ Type in terminal:
 
 3.  `npm install`
 If error occurs probbably you need to run (only on linux):
-`sudo sysctl -w fs.inotify.max_user_instances=1024`
-and
-`sudo sysctl -w fs.inotify.max_user_instances=1024`
+- `sudo sysctl -w fs.inotify.max_user_instances=1024`
+- `sudo sysctl -w fs.inotify.max_user_instances=1024`
 4. `npm run start`
 Open expo app on the phone, scan QR code displayed in terminal and wait for the app to build & run.
 
@@ -27,7 +26,7 @@ Open expo app on the phone, scan QR code displayed in terminal and wait for the 
 3. Open VSC and install following plugins: `flowtype.flow-for-vscode`, `dbaeumer.vscode-eslint`
 4.  In File -> Preferences -> Setting -> User Settings paste:
 ```
-	{
+{
     "javascript.validate.enable": false,
     "eslint.options": {
         "indent": ["error", 2]
