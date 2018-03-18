@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import PrimaryButton from '../../components/button/primary-button';
@@ -10,8 +11,21 @@ import COLORS from '../../styles/colors';
 import SPACINGS from  '../../styles/spacings';
 import styles from  './styles';
 
-export default class MainPage extends React.Component<MainPage> {
+
+type Props = {
+  navigation: Function
+};
+
+export default class MainPage extends React.Component<Props> {
+  static navigationOptions = {
+    header: null
+  };
+
   _onPress = () => {}
+
+  _onReportPress = () => {
+    this.props.navigation.navigate('SelectCategory');
+  }
 
   render() {
     return (
@@ -30,7 +44,7 @@ export default class MainPage extends React.Component<MainPage> {
         <View style={styles.navigationWrapper}>
           <PrimaryButton
             icon={<Icon name="location-on" size={30} color={COLORS.CORNFLOWER} />}
-            onPress={this._onPress}
+            onPress={this._onReportPress}
             text="Zgłoś" />
           <PrimaryButton
             icon={<Icon name="map" size={30} color={COLORS.CORNFLOWER} />}
