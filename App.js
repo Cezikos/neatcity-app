@@ -1,14 +1,28 @@
 import React from 'react';
 
-import MainPage from './src/javascripts/pages/main-page/main-page';
+import MainPage from './src/javascripts/pages/main/main';
+import SelectCategory from './src/javascripts/pages/select-category/select-category.js'
+import { StackNavigator } from 'react-navigation';
+
+const RootStack = StackNavigator(
+  {
+    'Main': {
+      screen: MainPage
+    },
+    'SelectCategory': {
+      screen: SelectCategory
+    }
+  },
+  {
+    initialRouteName: 'Main',
+  }
+);
 
 
 export default class App extends React.Component {
-  _onPress = () => {}
-
   render() {
     return (
-      <MainPage />
+      <RootStack />
     );
   }
 }
