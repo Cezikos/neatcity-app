@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": false,
+     "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-trailing-spaces": "error"
+  }
+}
