@@ -1,7 +1,7 @@
 import React from 'react';
 
-import MainPage from './src/javascripts/pages/main/main';
-import SelectCategory from './src/javascripts/pages/select-category/select-category.js'
+import MainPage from './src/javascripts/pages/main/main-page';
+import SelectCategory from './src/javascripts/pages/select-category/select-category-page'
 import { StackNavigator } from 'react-navigation';
 
 const RootStack = StackNavigator(

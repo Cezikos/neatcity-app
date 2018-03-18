@@ -23,7 +23,9 @@ const PrimaryButton = (props : Props) => {
       style={[].concat(styles.primaryContainer, props.customStyles)}>
         <View style={styles.inlineFlex}>
           {props.icon}
-          <Text style={[styles.primarayTextSmall, withIconStyle]}>{props.text}</Text>
+          <Text style={[styles.primarayTextSmall, withIconStyle]}>
+            {props.text}
+          </Text>
         </View>
     </TouchableHighlight>
   );

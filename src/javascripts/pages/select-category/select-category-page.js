@@ -13,7 +13,7 @@ import styles from  './styles';
 
 type Props = {};
 
-export default class SelectCategory extends React.Component<Props> {
+export default class SelectCategoryPage extends React.Component<Props> {
   static navigationOptions = {
     header: null
   };
