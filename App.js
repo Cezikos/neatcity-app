@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MainPage from './src/javascripts/pages/main/main-page';
-import SelectCategory from './src/javascripts/pages/select-category/select-category-page'
+import SelectCategoryPage from './src/javascripts/pages/select-category/select-category-page'
 import { StackNavigator } from 'react-navigation';
 
 const RootStack = StackNavigator(
@@ -10,7 +10,7 @@ const RootStack = StackNavigator(
       screen: MainPage
     },
     'SelectCategory': {
-      screen: SelectCategory
+      screen: SelectCategoryPage
     }
   },
   {
