@@ -6,6 +6,13 @@ const baseStyles = {
   borderRadius: 50,
 };
 
+const small = {
+  paddingBottom: 10,
+  paddingLeft: 35,
+  paddingRight: 35,
+  paddingTop: 10
+};
+
 const big = {
   paddingBottom: 15,
   paddingLeft: 42,
@@ -19,10 +26,20 @@ export default StyleSheet.create({
     ...big,
     backgroundColor: COLORS.CHAMBRAY,
   },
+  primaryContainerSmall: {
+    ...baseStyles,
+    ...small,
+    backgroundColor: COLORS.CHAMBRAY,
+  },
   primarayText: {
     color: COLORS.WHITE,
     textAlign: 'center',
     fontSize: 18
+  },
+  primarayTextSmall: {
+    color: COLORS.WHITE,
+    textAlign: 'center',
+    fontSize: 14
   },
   inlineFlex: {
     display: 'flex',
