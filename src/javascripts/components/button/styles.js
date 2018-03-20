@@ -7,10 +7,10 @@ const baseStyles = {
 };
 
 const small = {
-  paddingBottom: 10,
-  paddingLeft: 35,
-  paddingRight: 35,
-  paddingTop: 10
+  paddingBottom: 8,
+  paddingLeft: 16,
+  paddingRight: 16,
+  paddingTop: 8
 };
 
 const big = {
@@ -41,6 +41,11 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 14
   },
+  linkText: {
+    color: COLORS.TUNDORA,
+    fontSize: 14,
+    textAlign: 'center'
+  },
   inlineFlex: {
     display: 'flex',
     flexDirection: 'row',
@@ -52,5 +57,9 @@ export default StyleSheet.create({
   },
   highlight: {
     ...baseStyles
+  },
+  linkContainer: {
+    ...baseStyles,
+    ...small
   }
 });

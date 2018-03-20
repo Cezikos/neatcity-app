@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableHighlight, ScrollView } from 'react-native';
+import { StyleSheet, View, Image, TouchableHighlight, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import PrimaryButtonSmall from '../../components/button/primary-button-small';
@@ -18,7 +18,10 @@ export default class SelectCategoryPage extends React.Component<Props> {
     header: null
   };
 
-  _onPress = () => {}
+
+  _onPress = () => {
+    this.props.navigation.navigate('AddReport');
+  }
 
   render() {
     return (
@@ -39,15 +42,15 @@ export default class SelectCategoryPage extends React.Component<Props> {
                 onPress={this._onPress}
                 text="Zniszczona zieleń" />
               <PrimaryButtonSmall
-                customStyles={SPACINGS.BUTTON_SPACING}
+                customStyles={SPACINGS.MARGIN_TOP_24}
                 onPress={this._onPress}
                 text="Porzucone wraki" />
               <PrimaryButtonSmall
-                customStyles={SPACINGS.BUTTON_SPACING}
+                customStyles={SPACINGS.MARGIN_TOP_24}
                 onPress={this._onPress}
                 text="Infrastruktura drogowa" />
               <PrimaryButtonSmall
-                customStyles={SPACINGS.BUTTON_SPACING}
+                customStyles={SPACINGS.MARGIN_TOP_24}
                 onPress={this._onPress}
                 text="Niepoprawne oznakowanie" />
             </View>
