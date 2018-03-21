@@ -16,7 +16,9 @@ import styles from './styles';
 import COLORS from '../../styles/colors';
 import SPACINGS from '../../styles/spacings';
 
-type Props = {};
+type Props = {
+  navigation: Function
+};
 
 export default class AddReportPage extends React.Component<Props> {
   static navigationOptions = {

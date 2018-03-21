@@ -6,7 +6,7 @@ import styles from './styles';
 
 
 type Props = {
-  multiline?: Boolean
+  multiline?: boolean
 };
 
 const NcTextInput = (props : Props) => {

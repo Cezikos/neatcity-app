@@ -6,7 +6,8 @@ import styles from './styles';
 
 
 type Props = {
-  children: any
+  children: any,
+  style: Object
 };
 
 const PicturesGrid = (props : Props) => {

@@ -5,7 +5,7 @@ import styles from './styles';
 
 
 type Props = {
-  children: React.ReactChild,
+  children: React.Children,
   style?: Object
 };
 

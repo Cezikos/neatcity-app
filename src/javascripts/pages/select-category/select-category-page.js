@@ -11,7 +11,9 @@ import COLORS from '../../styles/colors';
 import SPACINGS from  '../../styles/spacings';
 import styles from  './styles';
 
-type Props = {};
+type Props = {
+  navigation: Function
+};
 
 export default class SelectCategoryPage extends React.Component<Props> {
   static navigationOptions = {
