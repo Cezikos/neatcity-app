@@ -3,6 +3,12 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+
+        <!-- Background color -->
+        <item name="background">@android:color/white</item>
+
+        <!-- Cursor color -->
+        <item name="colorControlActivated">@color/scorpion</item>
     </style>
 
 </resources>

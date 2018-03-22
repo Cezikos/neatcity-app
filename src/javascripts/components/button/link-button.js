@@ -9,21 +9,21 @@ import COLORS from '../../styles/colors';
 type Props = {
   onPress: Function,
   icon?: React.Node,
-  customStyles?: Array<Object> | Object | null,
+  customStyles?: Array<Object> | Object,
   text: string
 };
 
-const PrimaryButton = (props : Props) => {
+const LinkButton = (props : Props) => {
   const withIconStyle = props.icon ? styles.withIcon : null
 
   return (
     <TouchableHighlight
       onPress={props.onPress}
-      underlayColor={COLORS.SAN_MARINO}
-      style={[].concat(styles.primaryContainer, props.customStyles)}>
+      underlayColor={COLORS.ALTO}
+      style={[].concat(styles.linkContainer, props.customStyles)}>
         <View style={styles.inlineFlex}>
           {props.icon}
-          <Text style={[styles.primarayTextSmall, withIconStyle]}>
+          <Text style={[styles.linkText, withIconStyle]}>
             {props.text}
           </Text>
         </View>
@@ -32,4 +32,4 @@ const PrimaryButton = (props : Props) => {
 
 };
 
-export default PrimaryButton;
+export default LinkButton;

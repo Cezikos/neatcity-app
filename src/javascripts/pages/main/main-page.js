@@ -48,12 +48,12 @@ export default class MainPage extends React.Component<Props> {
             text="Zgłoś" />
           <PrimaryButton
             icon={<Icon name="map" size={30} color={COLORS.CORNFLOWER} />}
-            customStyles={SPACINGS.BUTTON_SPACING}
+            customStyles={SPACINGS.MARGIN_TOP_24}
             onPress={this._onPress}
             text="Mapa" />
           <PrimaryButton
             icon={<Icon name="person" size={30} color={COLORS.CORNFLOWER} />}
-            customStyles={SPACINGS.BUTTON_SPACING}
+            customStyles={SPACINGS.MARGIN_TOP_24}
             onPress={this._onPress}
             text="Profil" />
         </View>

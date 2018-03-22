@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableHighlight, ScrollView } from 'react-native';
+import { StyleSheet, View, Image, TouchableHighlight, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import PrimaryButtonSmall from '../../components/button/primary-button-small';
@@ -11,14 +11,34 @@ import COLORS from '../../styles/colors';
 import SPACINGS from  '../../styles/spacings';
 import styles from  './styles';
 
-type Props = {};
+type Props = {
+  navigation: Function,
+  categories: Array<Object>
+};
 
 export default class SelectCategoryPage extends React.Component<Props> {
   static navigationOptions = {
     header: null
   };
 
-  _onPress = () => {}
+  static defaultProps : Object;
+
+
+  _navigateTo = (category) => () => {
+    this.props.navigation.navigate('AddReport', { category });
+  }
+
+  _renderCategories = () => {
+    return this.props.categories.map((category, index) => {
+      return (
+        <PrimaryButtonSmall
+          key={`category-${category.id}`}
+          customStyles={!!index ?SPACINGS.MARGIN_TOP_24 : null}
+          onPress={this._navigateTo(category)}
+          text={category.name} />
+      );
+    })
+  }
 
   render() {
     return (
@@ -35,21 +55,7 @@ export default class SelectCategoryPage extends React.Component<Props> {
           <View style={styles.contentWrapper}>
             <NcText style={styles.headline}>Wybierz kategorię zgłoszenia:</NcText>
             <View style={styles.navigationWrapper}>
-              <PrimaryButtonSmall
-                onPress={this._onPress}
-                text="Zniszczona zieleń" />
-              <PrimaryButtonSmall
-                customStyles={SPACINGS.BUTTON_SPACING}
-                onPress={this._onPress}
-                text="Porzucone wraki" />
-              <PrimaryButtonSmall
-                customStyles={SPACINGS.BUTTON_SPACING}
-                onPress={this._onPress}
-                text="Infrastruktura drogowa" />
-              <PrimaryButtonSmall
-                customStyles={SPACINGS.BUTTON_SPACING}
-                onPress={this._onPress}
-                text="Niepoprawne oznakowanie" />
+              {this._renderCategories()}
             </View>
           </View>
         </ScrollView>
@@ -57,3 +63,24 @@ export default class SelectCategoryPage extends React.Component<Props> {
     );
   }
 }
+
+SelectCategoryPage.defaultProps = {
+  categories: [
+    {
+      id: 0,
+      name: 'Zniszczona zieleń'
+    },
+    {
+      id: 1,
+      name: 'Porzucone wraki'
+    },
+    {
+      id: 2,
+      name: 'Infrastruktura drogowa'
+    },
+    {
+      id: 3,
+      name: 'Niepoprawne oznakowanie'
+    }
+  ]
+};
