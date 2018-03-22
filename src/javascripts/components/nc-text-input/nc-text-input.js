@@ -12,7 +12,7 @@ type Props = {
 const NcTextInput = (props : Props) => {
   return (
     <TextInput
-      multiline={!!props.multiline}
+      multiline={props.multiline}
       style={styles.textInput}
       underlineColorAndroid="transparent" />
   );
