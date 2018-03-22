@@ -10,6 +10,7 @@ import CityChooser from '../../components/city-chooser/city-chooser';
 import COLORS from '../../styles/colors';
 import SPACINGS from  '../../styles/spacings';
 import styles from  './styles';
+import STRINGS from '../../values/strings';
 
 
 type Props = {
@@ -45,17 +46,17 @@ export default class MainPage extends React.Component<Props> {
           <PrimaryButton
             icon={<Icon name="location-on" size={30} color={COLORS.CORNFLOWER} />}
             onPress={this._onReportPress}
-            text="Zgłoś" />
+            text={STRINGS.PAGE.REPORT} />
           <PrimaryButton
             icon={<Icon name="map" size={30} color={COLORS.CORNFLOWER} />}
             customStyles={SPACINGS.MARGIN_TOP_24}
             onPress={this._onPress}
-            text="Mapa" />
+            text={STRINGS.PAGE.MAP} />
           <PrimaryButton
             icon={<Icon name="person" size={30} color={COLORS.CORNFLOWER} />}
             customStyles={SPACINGS.MARGIN_TOP_24}
             onPress={this._onPress}
-            text="Profil" />
+            text={STRINGS.PAGE.MAP} />
         </View>
       </View>
     );
