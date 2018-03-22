@@ -61,10 +61,10 @@ export default class AddReportPage extends React.Component<Props> {
             </SectionLabel>
 
             <PicturesGrid style={SPACINGS.MARGIN_TOP_8}>
-              <ImageContainer source={{uri: 'http://placekitten.com/200/300'}} />
-              <ImageContainer source={{uri: 'http://placekitten.com/200/300'}} />
-              <ImageContainer source={{uri: 'http://placekitten.com/200/300'}} />
-              <ImageContainer source={{uri: 'http://placekitten.com/200/300'}} />
+              <ImageContainer source={{uri: 'https://picsum.photos/200/300/?random'}} />
+              <ImageContainer source={{uri: 'https://picsum.photos/200/300/?random'}} />
+              <ImageContainer source={{uri: 'https://picsum.photos/200/300/?random'}} />
+              <ImageContainer source={{uri: 'https://picsum.photos/200/300/?random'}} />
               <ImageContainer>
                 <AddPictureLabel onPress={this._onPress} />
               </ImageContainer>
