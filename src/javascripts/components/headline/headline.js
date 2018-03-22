@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 
 import NcText from '../nc-text/nc-text'
 import styles from './styles';
 
 
 type Props = {
-  children: React.Children,
+  children: React.Node,
   style?: Object
 };
 

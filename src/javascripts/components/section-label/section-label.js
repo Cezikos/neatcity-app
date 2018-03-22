@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import { StyleSheet } from 'react-native';
 
 import NcText from '../nc-text/nc-text'
@@ -7,7 +7,7 @@ import styles from './styles';
 
 
 type Props = {
-  children: React.Children,
+  children: React.Node,
   style?: Object
 };
 

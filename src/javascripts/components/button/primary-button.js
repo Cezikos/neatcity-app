@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import { TouchableHighlight, Text, View } from 'react-native';
 
 import styles from './styles';
@@ -8,8 +8,8 @@ import COLORS from '../../styles/colors';
 
 type Props = {
   onPress: Function,
-  icon?: any,
-  customStyles?: Array<Object>,
+  icon?: React.Node,
+  customStyles?: Array<Object> | Object,
   text: string
 };
 

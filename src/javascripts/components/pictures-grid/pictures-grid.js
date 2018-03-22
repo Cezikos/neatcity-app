@@ -1,12 +1,12 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import styles from './styles';
 
 
 type Props = {
-  children: any,
+  children: React.Node,
   style: Object
 };
 

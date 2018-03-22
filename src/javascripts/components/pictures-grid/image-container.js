@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import { View, Image } from 'react-native';
 
 import styles from './styles';
@@ -7,8 +7,7 @@ import styles from './styles';
 
 type Props = {
   source?: Object,
-  children?: any
-
+  children?: React.Node
 };
 
 const ImageContainer = (props : Props) => {
