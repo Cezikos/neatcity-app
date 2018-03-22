@@ -15,6 +15,8 @@ import NcTextInput from '../../components/nc-text-input/nc-text-input';
 import styles from './styles';
 import COLORS from '../../styles/colors';
 import SPACINGS from '../../styles/spacings';
+import STRINGS from '../../values/strings';
+
 
 type Props = {
   navigation: Function
@@ -67,20 +69,20 @@ export default class AddReportPage extends React.Component<Props, State> {
       <ScrollView>
           <Icon style={styles.closeButton} name="close" size={30} color={COLORS.SCORPION} />
           <View style={styles.paddedBox}>
-            <Headline>Dodaj zgłoszenie</Headline>
+            <Headline>{STRINGS.HEADLINE.ADD_REPORT}</Headline>
 
             <SectionLabel style={SPACINGS.MARGIN_TOP_32}>
-              Tytuł
+              {STRINGS.LABEL.TITLE}
             </SectionLabel>
             <NcTextInput />
 
             <SectionLabel style={SPACINGS.MARGIN_TOP_24}>
-              Opis
+              {STRINGS.LABEL.DESCRIPTION}
             </SectionLabel>
             <NcTextInput multiline={true} />
 
             <SectionLabel style={SPACINGS.MARGIN_TOP_24}>
-              Kategoria
+              {STRINGS.LABEL.CATEGORY}
             </SectionLabel>
 
             <View style={styles.categoryBox}>
@@ -88,11 +90,11 @@ export default class AddReportPage extends React.Component<Props, State> {
               <LinkButton
                 customStyles={SPACINGS.MARGIN_LEFT_8}
                 onPress={this._onPress}
-                text="Zmień" />
+                text={STRINGS.ACTION.CHANGE} />
             </View>
 
             <SectionLabel style={SPACINGS.MARGIN_TOP_24}>
-              Zdjęcia
+            {STRINGS.LABEL.PHOTOS}
             </SectionLabel>
 
             <PicturesGrid style={SPACINGS.MARGIN_TOP_8}>
@@ -105,7 +107,7 @@ export default class AddReportPage extends React.Component<Props, State> {
             <PrimaryButton
               customStyles={StyleSheet.flatten([styles.alignCenter, SPACINGS.MARGIN_TOP_32])}
               onPress={this._onPress}
-              text="Oznacz na mapie" />
+              text={STRINGS.ACTION.MARK_ON_MAP} />
         </View>
       </ScrollView>
     );

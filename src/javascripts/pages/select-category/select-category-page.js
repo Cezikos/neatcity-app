@@ -10,6 +10,8 @@ import NcText from '../../components/nc-text/nc-text';
 import COLORS from '../../styles/colors';
 import SPACINGS from  '../../styles/spacings';
 import styles from  './styles';
+import STRINGS from '../../values/strings';
+
 
 type Props = {
   navigation: Function,
@@ -53,7 +55,7 @@ export default class SelectCategoryPage extends React.Component<Props> {
           </View>
 
           <View style={styles.contentWrapper}>
-            <NcText style={styles.headline}>Wybierz kategorię zgłoszenia:</NcText>
+            <NcText style={styles.headline}>{STRINGS.HEADLINE.SELECT_REPORT_CATEGORY}:</NcText>
             <View style={styles.navigationWrapper}>
               {this._renderCategories()}
             </View>
