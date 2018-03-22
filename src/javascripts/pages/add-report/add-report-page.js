@@ -20,14 +20,49 @@ type Props = {
   navigation: Function
 };
 
-export default class AddReportPage extends React.Component<Props> {
+type State = {
+  images: Array<string>,
+  category: Object
+};
+
+export default class AddReportPage extends React.Component<Props, State> {
+  constructor() {
+    super();
+
+    this.state = {
+      category: {},
+      images: [
+        'https://picsum.photos/200/300/?random',
+        'https://picsum.photos/200/300/?random',
+        'https://picsum.photos/200/300/?random',
+        'https://picsum.photos/200/300/?random',
+        'https://picsum.photos/200/300/?random'
+      ]
+    };
+  }
+
   static navigationOptions = {
     header: null
   };
 
+  componentWillMount() {
+    const { params } = this.props.navigation.state;
+    const category = params ? params.category : {};
+
+    this.setState({
+      category: category
+    });
+  }
+
   _onPress = () => {}
 
+  _renderImages = () => {
+    return this.state.images.map((url, index) => <ImageContainer key={`img-${index}`} source={{uri: url}} />);
+  }
+
   render() {
+
+
     return (
       <ScrollView>
           <Icon style={styles.closeButton} name="close" size={30} color={COLORS.SCORPION} />
@@ -49,7 +84,7 @@ export default class AddReportPage extends React.Component<Props> {
             </SectionLabel>
 
             <View style={styles.categoryBox}>
-              <Sticker name="Infrastruktura drogowa" />
+              <Sticker name={this.state.category.name} />
               <LinkButton
                 customStyles={SPACINGS.MARGIN_LEFT_8}
                 onPress={this._onPress}
@@ -61,10 +96,7 @@ export default class AddReportPage extends React.Component<Props> {
             </SectionLabel>
 
             <PicturesGrid style={SPACINGS.MARGIN_TOP_8}>
-              <ImageContainer source={{uri: 'https://picsum.photos/200/300/?random'}} />
-              <ImageContainer source={{uri: 'https://picsum.photos/200/300/?random'}} />
-              <ImageContainer source={{uri: 'https://picsum.photos/200/300/?random'}} />
-              <ImageContainer source={{uri: 'https://picsum.photos/200/300/?random'}} />
+              {this._renderImages()}
               <ImageContainer>
                 <AddPictureLabel onPress={this._onPress} />
               </ImageContainer>

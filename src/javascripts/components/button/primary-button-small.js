@@ -9,7 +9,7 @@ import COLORS from '../../styles/colors';
 type Props = {
   onPress: Function,
   icon?: React.Node,
-  customStyles?: Array<Object> | Object,
+  customStyles?: Array<Object> | Object | null,
   text: string
 };
 
