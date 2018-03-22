@@ -61,10 +61,10 @@ export default class AddReportPage extends React.Component<Props> {
             </SectionLabel>
 
             <PicturesGrid style={SPACINGS.MARGIN_TOP_8}>
-              <ImageContainer source={{uri: 'https://www.wykop.pl/cdn/c3397993/link_HkHzlBbHdJN7BmaY7aVzhhsSO7WR7ZiZ,w300h223.jpg'}} />
-              <ImageContainer source={{uri: 'https://www.wykop.pl/cdn/c3397993/link_HkHzlBbHdJN7BmaY7aVzhhsSO7WR7ZiZ,w300h223.jpg'}} />
-              <ImageContainer source={{uri: 'https://www.wykop.pl/cdn/c3397993/link_HkHzlBbHdJN7BmaY7aVzhhsSO7WR7ZiZ,w300h223.jpg'}} />
-              <ImageContainer source={{uri: 'https://www.wykop.pl/cdn/c3397993/link_HkHzlBbHdJN7BmaY7aVzhhsSO7WR7ZiZ,w300h223.jpg'}} />
+              <ImageContainer source={{uri: 'http://placekitten.com/200/300'}} />
+              <ImageContainer source={{uri: 'http://placekitten.com/200/300'}} />
+              <ImageContainer source={{uri: 'http://placekitten.com/200/300'}} />
+              <ImageContainer source={{uri: 'http://placekitten.com/200/300'}} />
               <ImageContainer>
                 <AddPictureLabel onPress={this._onPress} />
               </ImageContainer>
