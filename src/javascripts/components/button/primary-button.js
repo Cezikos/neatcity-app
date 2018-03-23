@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react';
-import { TouchableHighlight, Text, View } from 'react-native';
+import { TouchableHighlight, View } from 'react-native';
 
+import NcText from '../nc-text/nc-text';
 import styles from './styles';
 import COLORS from '../../styles/colors';
 
@@ -23,7 +24,7 @@ const PrimaryButton = (props : Props) => {
       style={[].concat(styles.primaryContainer, props.customStyles)}>
         <View style={styles.inlineFlex}>
           {props.icon}
-          <Text style={[styles.primarayText, withIconStyle]}>{props.text}</Text>
+          <NcText style={[styles.primarayText, withIconStyle]}>{props.text}</NcText>
         </View>
     </TouchableHighlight>
   );

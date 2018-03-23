@@ -56,7 +56,7 @@ export default class MainPage extends React.Component<Props> {
             icon={<Icon name="person" size={30} color={COLORS.CORNFLOWER} />}
             customStyles={SPACINGS.MARGIN_TOP_24}
             onPress={this._onPress}
-            text={STRINGS.PAGE.MAP} />
+            text={STRINGS.PAGE.PROFILE} />
         </View>
       </View>
     );
