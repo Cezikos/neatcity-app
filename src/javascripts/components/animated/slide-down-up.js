@@ -11,7 +11,7 @@ type Props = {
 type State = {
   animatedHeight: Animated.Value,
   animatedOpacity: Animated.Value
-}
+};
 
 export default class SlideDownUp extends React.Component<Props, State> {
   constructor() {

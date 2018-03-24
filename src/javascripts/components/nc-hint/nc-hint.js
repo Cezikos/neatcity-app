@@ -5,6 +5,7 @@ import { StyleSheet } from 'react-native';
 import NcText from '../nc-text/nc-text';
 import styles from './styles';
 
+
 type Props = {
   onPress: Function,
   style: Object | Array<Object>

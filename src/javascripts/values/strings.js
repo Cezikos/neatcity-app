@@ -37,5 +37,4 @@ export default {
     NOTIFY_ME_WHEN_SOMEONE_ANSERWS: 'Powiadom mnie, gdy ktoś odpowie na\u00A0moje zgłoszenie',
     NOTIFY_ME_WHEN_MY_REPORT: 'Powiadom mnie, gdy moje zgłoszenie stanie się popularne.'
   }
-
 };
