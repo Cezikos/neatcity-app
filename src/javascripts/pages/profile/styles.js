@@ -1,12 +1,11 @@
 import { StyleSheet } from 'react-native';
 
 import COLORS from '../../styles/colors';
-
+import DIMENS from '../../styles/dimens';
 
 export default StyleSheet.create({
-  headline: {
-    alignSelf: 'center',
-    color: COLORS.BLACK,
-    fontSize: 20
+  optionBox: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   }
 });

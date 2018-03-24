@@ -12,7 +12,7 @@ import PrimaryButton from '../../components/button/primary-button';
 import AddPictureLabel from '../../components/pictures-grid/add-picture-label';
 import ImageContainer from '../../components/pictures-grid/image-container';
 import NcTextInput from '../../components/nc-text-input/nc-text-input';
-import styles from './styles';
+import sharedStyles from  '../styles';
 import COLORS from '../../styles/colors';
 import SPACINGS from '../../styles/spacings';
 import STRINGS from '../../values/strings';
@@ -67,8 +67,8 @@ export default class AddReportPage extends React.Component<Props, State> {
 
     return (
       <ScrollView>
-          <Icon style={styles.closeButton} name="close" size={30} color={COLORS.SCORPION} />
-          <View style={styles.paddedBox}>
+          <Icon style={sharedStyles.closeButton} name="close" size={30} color={COLORS.SCORPION} />
+          <View style={sharedStyles.paddedBox}>
             <Headline>{STRINGS.HEADLINE.ADD_REPORT}</Headline>
 
             <SectionLabel style={SPACINGS.MARGIN_TOP_32}>
@@ -85,7 +85,7 @@ export default class AddReportPage extends React.Component<Props, State> {
               {STRINGS.LABEL.CATEGORY}
             </SectionLabel>
 
-            <View style={styles.categoryBox}>
+            <View style={[sharedStyles.inlineBox, SPACINGS.MARGIN_TOP_8]}>
               <Sticker name={this.state.category.name} />
               <LinkButton
                 customStyles={SPACINGS.MARGIN_LEFT_8}
@@ -105,7 +105,7 @@ export default class AddReportPage extends React.Component<Props, State> {
             </PicturesGrid>
 
             <PrimaryButton
-              customStyles={StyleSheet.flatten([styles.alignCenter, SPACINGS.MARGIN_TOP_32])}
+              customStyles={StyleSheet.flatten([sharedStyles.alignCenter, SPACINGS.MARGIN_TOP_32])}
               onPress={this._onPress}
               text={STRINGS.ACTION.MARK_ON_MAP} />
         </View>

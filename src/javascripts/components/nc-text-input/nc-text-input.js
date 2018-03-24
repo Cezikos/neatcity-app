@@ -6,13 +6,15 @@ import styles from './styles';
 
 
 type Props = {
-  multiline?: boolean
+  multiline?: boolean,
+  secureTextEntry?: boolean
 };
 
 const NcTextInput = (props : Props) => {
   return (
     <TextInput
       multiline={props.multiline}
+      secureTextEntry={props.secureTextEntry}
       style={styles.textInput}
       underlineColorAndroid="transparent" />
   );
