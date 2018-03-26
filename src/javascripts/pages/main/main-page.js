@@ -2,6 +2,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import PrimaryButton from '../../components/button/primary-button';
@@ -11,18 +12,40 @@ import COLORS from '../../styles/colors';
 import SPACINGS from  '../../styles/spacings';
 import styles from  './styles';
 import STRINGS from '../../values/strings';
+import actions from '../../redux/actions/city';
 
 
 type Props = {
-  navigation: Function
+  navigation: Function,
+  city: string
 };
 
-export default class MainPage extends React.Component<Props> {
+
+type State = {
+  city: string
+};
+
+function mapStateToProps(state : State) {
+  return {
+    city: state.city
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    changeCity: (city) => {
+      dispatch(actions.actions.changeCity(city))
+    }
+  };
+}
+
+class MainPage extends React.Component<Props, State> {
   static navigationOptions = {
     header: null
   };
 
-  _onPress = () => {}
+  _onPress = () => {
+  }
 
   _navigateTo = (page) => () => {
     this.props.navigation.navigate(page);
@@ -38,7 +61,7 @@ export default class MainPage extends React.Component<Props> {
             resizeMode="center"
             style={styles.logo} />
           <CityChooser
-            name="Łódź"
+            name={this.props.city || 'Łódź'}
             onPress={this._onPress}/>
         </View>
 
@@ -62,3 +85,9 @@ export default class MainPage extends React.Component<Props> {
     );
   }
 }
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MainPage);

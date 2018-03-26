@@ -1,11 +1,14 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
+import { Provider } from 'react-redux';
 
 import MainPage from './src/javascripts/pages/main/main-page';
 import SelectCategoryPage from './src/javascripts/pages/select-category/select-category-page';
 import AddReportPage from './src/javascripts/pages/add-report/add-report-page';
 import ProfilePage from './src/javascripts/pages/profile/profile-page';
 import StatusPage from './src/javascripts/pages/status/status-page';
+import store from './src/javascripts/redux/store';
+
 
 const RootStack = StackNavigator(
   {
@@ -34,7 +37,9 @@ const RootStack = StackNavigator(
 export default class App extends React.Component {
   render() {
     return (
-      <RootStack />
+      <Provider store={store}>
+        <RootStack />
+      </Provider>
     );
   }
 }
