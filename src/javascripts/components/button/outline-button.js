@@ -30,7 +30,6 @@ const LinkButton = (props : Props) => {
         </View>
     </TouchableHighlight>
   );
-
 };
 
 export default LinkButton;

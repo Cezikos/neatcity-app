@@ -54,7 +54,6 @@ class StatusPage extends React.Component<Props> {
     switch (action) {
       case this.ACTIONS.GO_TO_REPORT:
       break;
-
       case this.ACTIONS.GO_BACK:
       break;
     }
