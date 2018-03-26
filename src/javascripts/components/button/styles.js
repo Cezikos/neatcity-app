@@ -3,7 +3,7 @@ import COLORS from '../../styles/colors';
 
 
 const baseStyles = {
-  borderRadius: 50,
+  borderRadius: 50
 };
 
 const small = {
@@ -26,6 +26,12 @@ export default StyleSheet.create({
     ...big,
     backgroundColor: COLORS.CHAMBRAY,
   },
+  outlineContainer: {
+    ...baseStyles,
+    ...big,
+    borderWidth: 1,
+    borderColor: COLORS.WHITE,
+  },
   primaryContainerSmall: {
     ...baseStyles,
     ...small,
@@ -45,6 +51,9 @@ export default StyleSheet.create({
     color: COLORS.TUNDORA,
     fontSize: 14,
     textAlign: 'center'
+  },
+  outlineText: {
+    color: COLORS.WHITE
   },
   inlineFlex: {
     display: 'flex',
