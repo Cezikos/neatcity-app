@@ -1,10 +1,11 @@
 import React from 'react';
+import { StackNavigator } from 'react-navigation';
 
 import MainPage from './src/javascripts/pages/main/main-page';
 import SelectCategoryPage from './src/javascripts/pages/select-category/select-category-page';
 import AddReportPage from './src/javascripts/pages/add-report/add-report-page';
+import ProfilePage from './src/javascripts/pages/profile/profile-page';
 import StatusPage from './src/javascripts/pages/status/status-page';
-import { StackNavigator } from 'react-navigation';
 
 const RootStack = StackNavigator(
   {
@@ -16,6 +17,9 @@ const RootStack = StackNavigator(
     },
     'AddReport': {
       screen: AddReportPage
+    },
+    'Profile': {
+      screen: ProfilePage
     },
     'StatusPage': {
       screen: StatusPage

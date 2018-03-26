@@ -6,12 +6,13 @@ import styles from './styles';
 
 
 type Props = {
-  style: Object | Array<Object | null>,
-  children: React.Node
+  style?: Object | Array<Object> | null,
+  onPress?: Function,
+  children: React.Node,
 };
 
 const NcText = (props : Props) => (
-  <Text style={StyleSheet.flatten([props.style, styles.ncText])}>{props.children}</Text>
+  <Text onPress={props.onPress} style={StyleSheet.flatten([props.style, styles.ncText])}>{props.children}</Text>
 );
 
 export default NcText

@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import NcText from '../nc-text/nc-text'
 import styles from './styles';
@@ -8,14 +8,18 @@ import styles from './styles';
 
 type Props = {
   children: React.Node,
-  style?: Object
+  style?: Object,
+  iconAfter?: React.Node
 };
 
 const SectionLabel = (props : Props) => {
   return (
-    <NcText style={StyleSheet.flatten([props.style, styles.sectionLabel])}>
-      {props.children}
-    </NcText>
+    <View style={StyleSheet.flatten([styles.sectionLabel, props.style])}>
+      <NcText>
+        {props.children}
+      </NcText>
+      {props.iconAfter}
+    </View>
   );
 }
 

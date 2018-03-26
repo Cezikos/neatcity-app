@@ -24,8 +24,8 @@ export default class MainPage extends React.Component<Props> {
 
   _onPress = () => {}
 
-  _onReportPress = () => {
-    this.props.navigation.navigate('SelectCategory');
+  _navigateTo = (page) => () => {
+    this.props.navigation.navigate(page);
   }
 
   render() {
@@ -45,7 +45,7 @@ export default class MainPage extends React.Component<Props> {
         <View style={styles.navigationWrapper}>
           <PrimaryButton
             icon={<Icon name="location-on" size={30} color={COLORS.CORNFLOWER} />}
-            onPress={this._onReportPress}
+            onPress={this._navigateTo('SelectCategory')}
             text={STRINGS.PAGE.REPORT} />
           <PrimaryButton
             icon={<Icon name="map" size={30} color={COLORS.CORNFLOWER} />}
@@ -55,7 +55,7 @@ export default class MainPage extends React.Component<Props> {
           <PrimaryButton
             icon={<Icon name="person" size={30} color={COLORS.CORNFLOWER} />}
             customStyles={SPACINGS.MARGIN_TOP_24}
-            onPress={this._onPress}
+            onPress={this._navigateTo('Profile')}
             text={STRINGS.PAGE.PROFILE} />
         </View>
       </View>

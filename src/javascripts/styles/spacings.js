@@ -5,6 +5,9 @@ export default {
   MARGIN_TOP_8: {
     marginTop: 8
   },
+  MARGIN_TOP_16: {
+    marginTop: 16
+  },
   MARGIN_TOP_24: {
     marginTop: 24
   },

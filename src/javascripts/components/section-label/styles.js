@@ -1,11 +1,9 @@
 import { StyleSheet } from 'react-native';
 
-import COLORS from '../../styles/colors';
-
 
 export default StyleSheet.create({
-  headline: {
-    color: COLORS.SCORPION,
-    fontSize: 14
+  sectionLabel: {
+    alignItems: 'center',
+    flexDirection: 'row'
   }
 });

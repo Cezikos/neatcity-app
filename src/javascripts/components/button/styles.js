@@ -61,6 +61,9 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  grayBackground: {
+    backgroundColor: COLORS.SILVER
+  },
   withIcon: {
     paddingLeft: 5
   },
