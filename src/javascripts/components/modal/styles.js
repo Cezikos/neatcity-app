@@ -1,6 +1,7 @@
 import COLORS from '../../styles/colors';
 import DIMENS from '../../styles/dimens'
 
+
 export default {
   container: {
     justifyContent: 'center',
@@ -43,9 +44,5 @@ export default {
   },
   textCenter: {
     textAlign: 'center'
-  },
-  chooseCityFooter: {
-    alignItems: 'center',
-    marginTop: 16
   }
 };

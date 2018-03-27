@@ -9,14 +9,12 @@ import PrimaryButton from '../../components/button/primary-button';
 import BackgroundImage from '../../components/background-image/background-image';
 import CityChooser from '../../components/city-chooser/city-chooser';
 import ChooseCityModal from '../../components/modal/choose-city-modal';
-import LinkButton from '../../components/button/link-button';
 import COLORS from '../../styles/colors';
 import SPACINGS from  '../../styles/spacings';
 import styles from  './styles';
 import STRINGS from '../../values/strings';
 import actions from '../../redux/actions/modal';
 import CONSTANTS from '../../redux/constants/modal';
-import NcText from '../../components/nc-text/nc-text';
 
 
 type Props = {
