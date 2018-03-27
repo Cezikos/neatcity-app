@@ -39,7 +39,7 @@ export default class SelectCategoryPage extends React.Component<Props> {
           onPress={this._navigateTo(category)}
           text={category.name} />
       );
-    })
+    });
   }
 
   render() {

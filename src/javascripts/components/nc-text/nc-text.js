@@ -6,7 +6,7 @@ import styles from './styles';
 
 
 type Props = {
-  style?: Object | Array<Object> | null,
+  style?: Object | Array<Object | null>,
   onPress?: Function,
   children: React.Node,
 };

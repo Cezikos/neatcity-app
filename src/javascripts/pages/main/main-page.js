@@ -8,16 +8,21 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import PrimaryButton from '../../components/button/primary-button';
 import BackgroundImage from '../../components/background-image/background-image';
 import CityChooser from '../../components/city-chooser/city-chooser';
+import ChooseCityModal from '../../components/modal/choose-city-modal';
+import LinkButton from '../../components/button/link-button';
 import COLORS from '../../styles/colors';
 import SPACINGS from  '../../styles/spacings';
 import styles from  './styles';
 import STRINGS from '../../values/strings';
-import actions from '../../redux/actions/city';
+import actions from '../../redux/actions/modal';
+import CONSTANTS from '../../redux/constants/modal';
+import NcText from '../../components/nc-text/nc-text';
 
 
 type Props = {
   navigation: Function,
-  city: string
+  city: string,
+  openModal: Function
 };
 
 
@@ -33,8 +38,8 @@ function mapStateToProps(state : State) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    changeCity: (city) => {
-      dispatch(actions.actions.changeCity(city))
+    openModal: () => {
+      dispatch(actions.actions.openModal(CONSTANTS.MODALS.CHOOSE_CITY));
     }
   };
 }
@@ -62,7 +67,7 @@ class MainPage extends React.Component<Props, State> {
             style={styles.logo} />
           <CityChooser
             name={this.props.city || 'Łódź'}
-            onPress={this._onPress}/>
+            onPress={this.props.openModal}/>
         </View>
 
         <View style={styles.navigationWrapper}>
@@ -81,6 +86,8 @@ class MainPage extends React.Component<Props, State> {
             onPress={this._navigateTo('Profile')}
             text={STRINGS.PAGE.PROFILE} />
         </View>
+
+        <ChooseCityModal />
       </View>
     );
   }
