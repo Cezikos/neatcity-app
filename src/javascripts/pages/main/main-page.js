@@ -23,17 +23,6 @@ type Props = {
   openModal: Function
 };
 
-
-type State = {
-  city: string
-};
-
-function mapStateToProps(state : State) {
-  return {
-    city: state.city
-  };
-}
-
 function mapDispatchToProps(dispatch) {
   return {
     openModal: () => {
@@ -42,7 +31,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-class MainPage extends React.Component<Props, State> {
+class MainPage extends React.Component<Props> {
   static navigationOptions = {
     header: null
   };
@@ -64,7 +53,7 @@ class MainPage extends React.Component<Props, State> {
             resizeMode="center"
             style={styles.logo} />
           <CityChooser
-            name={this.props.city || 'Łódź'}
+            name={'Łódź'}
             onPress={this.props.openModal}/>
         </View>
 
@@ -93,6 +82,6 @@ class MainPage extends React.Component<Props, State> {
 
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(MainPage);
