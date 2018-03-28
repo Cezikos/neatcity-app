@@ -22,7 +22,9 @@ export default {
   HEADLINE: {
     SELECT_REPORT_CATEGORY: 'Wybierz kategorię zgłoszenia',
     ADD_REPORT: 'Dodaj zgłoszenie',
-    MY_PROFILE: 'Mój profil'
+    MY_PROFILE: 'Mój profil',
+    SELECT_CITY: 'Wybierz miasto',
+    WHAT_IS_REPUTATION: 'Czym jest reputacja?'
   },
   PAGE: {
     REPORT: 'Zgłoś',
@@ -33,7 +35,8 @@ export default {
     YOU_CAN_ADD_REPORTS_BUT: 'Możesz dodawać zgłoszenia, ale zmiany statusu muszą być potwierdzone przez innych użytkowników.',
     YOU_DONT_HAVE_ANY_REPORTS_YET: 'Nie masz jeszcze żadnych zgłoszeń.',
     FOR_NOW_ONLY_ONE_CITY_IS_AVAILABLE: 'Aktualnie dostępne jest tylko jedno miasto.\nChcesz, aby Twoja miejscowość znalazła się w aplikacji?',
-    SEE_HOW: 'Zobacz jak'
+    SEE_HOW: 'Zobacz jak',
+    REPUTATION_IS_A_SCORING: 'Reputacja to system punktowania użytkowników pozwalający weryfikować zgłoszenia.'
   },
   SETTING: {
     NOTIFY_ME_WHEN_SOMEONE_ANSERWS: 'Powiadom mnie, gdy ktoś odpowie na\u00A0moje zgłoszenie',

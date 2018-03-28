@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { StyleSheet, View, Image, TouchableHighlight, ScrollView, Switch } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { connect } from 'react-redux';
 
 import LinkButton from '../../components/button/link-button';
 import Headline from '../../components/headline/headline';
@@ -10,6 +11,7 @@ import NcText from '../../components/nc-text/nc-text';
 import NcTextInput from '../../components/nc-text-input/nc-text-input';
 import NcSwitch from '../../components/nc-switch/nc-switch';
 import NcHint from '../../components/nc-hint/nc-hint';
+import ReputationHintModal from '../../components/modal/reputation-hint-modal';
 import SlideDownUp from '../../components/animated/slide-down-up';
 import styles from './styles';
 import sharedStyles from '../styles';
@@ -17,13 +19,24 @@ import COLORS from '../../styles/colors';
 import SPACINGS from '../../styles/spacings';
 import STRINGS from '../../values/strings';
 import iconsMap from './icons-map';
+import actions from '../../redux/actions/modal';
+import CONSTANTS from '../../redux/constants/modal';
 
 
 type Props = {
   navigation: Function,
   user: Object,
-  reports: Array<Object>
+  reports: Array<Object>,
+  openModal: Function
 };
+
+function mapDispatchToProps(dispatch) {
+  return {
+    openModal: () => {
+      dispatch(actions.actions.openModal(CONSTANTS.MODALS.REPUTATION_HINT));
+    }
+  };
+}
 
 type State = {
   isPasswordChangeActive: boolean,
@@ -51,7 +64,9 @@ class ProfilePage extends React.Component<Props, State> {
 
   _onPasswordChangeSubmit = () => {}
 
-  _onReputationHintPress = () => {}
+  _onReputationHintPress = () => {
+    this.props.openModal();
+  }
 
   _renderPasswordChangeForm = () => {
     return (
@@ -167,6 +182,8 @@ class ProfilePage extends React.Component<Props, State> {
               : <NcText style={[sharedStyles.bodyText, SPACINGS.MARGIN_TOP_8]}>{STRINGS.HINT.YOU_DONT_HAVE_ANY_REPORTS_YET}</NcText>
             }
         </View>
+
+        <ReputationHintModal />
       </ScrollView>
     );
   }
@@ -203,6 +220,9 @@ ProfilePage.defaultProps = {
       }
     }
   ]
-}
+};
 
-export default ProfilePage;
+export default connect(
+  null,
+  mapDispatchToProps
+)(ProfilePage);

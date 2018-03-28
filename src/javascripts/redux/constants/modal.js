@@ -4,6 +4,7 @@ export default {
     OPEN_MODAL: 'OPEN_MODAL'
   },
   MODALS: {
-    CHOOSE_CITY: 'CHOOSE_CITY'
+    CHOOSE_CITY: 'CHOOSE_CITY',
+    REPUTATION_HINT: 'REPUTATION_HINT'
   }
 };

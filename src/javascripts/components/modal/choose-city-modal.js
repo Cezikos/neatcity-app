@@ -1,7 +1,7 @@
+// @flow
 import React from 'react';
 import { View, Linking } from 'react-native';
 
-// @flow
 import NcModal from './nc-modal';
 import NcText from '../nc-text/nc-text';
 import LinkButton from '../button/link-button';
@@ -24,7 +24,7 @@ class ChooseCityModal extends React.Component<Props> {
         name={CONSTANTS.MODALS.CHOOSE_CITY}
         style={styles.alignCenter}
         titleStyle={styles.textCenter}
-        title="Wybierz miasto">
+        title={STRINGS.HEADLINE.CHOOSE_CITY}>
         <NcText style={styles.textCenter}>
           {STRINGS.HINT.FOR_NOW_ONLY_ONE_CITY_IS_AVAILABLE}
         </NcText>
